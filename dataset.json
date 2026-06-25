@@ -1,17 +1,47 @@
 [
   {
-    "task": "Create a JSON configuration for an AWS Lambda function that processes S3 events with a 5-minute timeout and 512MB memory allocation",
-    "format": "json",
-    "solution_criteria": "Valid JSON with Lambda timeout set to 300 seconds, memory set to 512, and proper S3 event trigger configuration"
+    "prompt_inputs": {
+      "height": "175",
+      "weight": "68",
+      "goal": "Marathon runner needing carb-loading strategy for race tomorrow morning at 7 AM",
+      "restrictions": "No dairy products"
+    },
+    "solution_criteria": [
+      "Emphasizes high carbohydrate foods throughout the day",
+      "Includes easily digestible dinner to avoid race day stomach issues",
+      "Avoids dairy products in all meals"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a marathon runner who needs high carbohydrate intake and has a morning race the next day"
   },
   {
-    "task": "Write a Python function that takes an AWS S3 bucket name and returns a list of all object keys in that bucket using boto3",
-    "format": "python",
-    "solution_criteria": "Function uses boto3 S3 client, correctly calls list_objects_v2 or similar method, handles pagination if necessary, and returns a list of keys"
+    "prompt_inputs": {
+      "height": "178",
+      "weight": "88",
+      "goal": "Powerlifting cutting phase - high protein, low calorie deficit while maintaining strength",
+      "restrictions": "Nut allergy"
+    },
+    "solution_criteria": [
+      "Provides exactly 1 day meal plan",
+      "High protein content appropriate for powerlifter cutting phase",
+      "Contains no nuts or nut-based products"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a powerlifter in cutting phase who requires high protein, low calorie intake, and has a nut allergy"
   },
   {
-    "task": "Create a regular expression that validates an AWS IAM ARN format (arn:aws:iam::123456789012:role/MyRole)",
-    "format": "regex",
-    "solution_criteria": "Regex correctly matches valid IAM ARNs, captures account ID and resource path, rejects invalid formats, and works with various resource types (role, user, policy)"
+    "prompt_inputs": {
+      "height": "188",
+      "weight": "82",
+      "goal": "Olympic swimmer in heavy training phase requiring 5000+ calories daily",
+      "restrictions": "vegetarian"
+    },
+    "solution_criteria": [
+      "Meal plan totals approximately 5000+ calories",
+      "All meals are vegetarian",
+      "Includes protein sources suitable for athletic performance"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with an Olympic swimmer during heavy training who needs 5000+ calories and is vegetarian"
   }
 ]

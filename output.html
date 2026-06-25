@@ -1,0 +1,370 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">6.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">66.7%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a marathon runner who needs high carbohydrate intake and has a morning race the next day</td>
+                <td class="prompt-inputs"><strong>height:</strong> 175<br><strong>weight:</strong> 68<br><strong>goal:</strong> Marathon runner needing carb-loading strategy for race tomorrow morning at 7 AM<br><strong>restrictions:</strong> No dairy products</td>
+                <td class="criteria">• Emphasizes high carbohydrate foods throughout the day<br>• Includes easily digestible dinner to avoid race day stomach issues<br>• Avoids dairy products in all meals</td>
+                <td class="output"><pre># Pre-Marathon Carb-Loading Strategy (Race Tomorrow at 7 AM)
+
+## TODAY - Final Carb-Loading Day
+
+### Breakfast (8-9 AM)
+- Large bowl of oatmeal made with water or almond milk
+- 2 bananas
+- Honey or maple syrup
+- Orange juice
+- White bread with jam
+
+### Lunch (12-1 PM)
+- Large portion of white pasta (easy to digest) with marinara sauce
+- White bread rolls
+- Fruit smoothie (banana, berries, orange juice)
+
+### Afternoon Snack (3-4 PM)
+- Rice cakes with honey
+- Pretzels
+- Sports drink or coconut water
+
+### Dinner (5-6 PM) - **EARLY & LIGHT**
+- White rice or plain pasta
+- Baked chicken or fish (small portion for protein)
+- Cooked carrots or other easily digestible vegetables
+- White bread
+- Avoid: high fiber, fatty foods, anything new
+
+### Evening (7-8 PM)
+- Small bagel with jam
+- Banana
+- Sip water regularly
+
+---
+
+## RACE DAY MORNING (Wake up ~4:30 AM)
+
+### Pre-Race Meal (5:00 AM - 2 hours before start)
+- 1-2 plain bagels OR white toast with honey/jam
+- 1 banana
+- Small amount of oatmeal
+- 16-20 oz water or sports drink
+- **Avoid fiber, fat, and protein-heavy foods**
+
+### 30-60 Minutes Before Race
+- Energy gel or chews
+- Small sips of sports drink
+
+---
+
+## Key Tips:
+- **Stay hydrated** but don't overdrink today
+- Stop eating by 8 PM tonight
+- Stick to familiar, tested foods only
+- Avoid dairy, high fiber, greasy/fried foods
+- Focus on simple carbs: white bread, white rice, pasta, bananas
+- Get good sleep tonight (aim for bed by 9-10 PM)
+
+**Good luck with your marathon! 🏃‍♂️**</pre></td>
+                <td class="score-col"><span class="score score-low">2</span></td>
+                <td class="reasoning">While the solution excellently addresses all three secondary criteria (high carb emphasis, digestible dinner, dairy-free), it completely fails all three mandatory requirements. There is no daily caloric total provided, no macronutrient breakdown given, and portions are described qualitatively rather than with exact measurements (e.g., '2 cups oatmeal', '200g pasta'). The mandatory requirements explicitly state the output should include these elements, and their absence constitutes automatic failure regardless of how well the secondary criteria are met.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a powerlifter in cutting phase who requires high protein, low calorie intake, and has a nut allergy</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178<br><strong>weight:</strong> 88<br><strong>goal:</strong> Powerlifting cutting phase - high protein, low calorie deficit while maintaining strength<br><strong>restrictions:</strong> Nut allergy</td>
+                <td class="criteria">• Provides exactly 1 day meal plan<br>• High protein content appropriate for powerlifter cutting phase<br>• Contains no nuts or nut-based products</td>
+                <td class="output"><pre># Cutting Phase Nutrition Plan for Powerlifting
+
+## Daily Macronutrient Targets
+
+**Target Calories:** ~2,200-2,400 (moderate deficit)
+- **Protein:** 200-220g (2.5g per kg bodyweight - priority for muscle retention)
+- **Fats:** 60-70g (0.8g per kg - maintain hormone production)
+- **Carbs:** 180-220g (fuel training, adjust based on energy needs)
+
+---
+
+## Sample Daily Meal Plan
+
+### Meal 1 (Breakfast)
+- 4 whole eggs + 2 egg whites scrambled
+- 80g oatmeal with berries
+- Black coffee
+- **~550 cal | 40g protein**
+
+### Meal 2 (Mid-Morning)
+- 200g Greek yogurt (0% fat)
+- 1 banana
+- **~250 cal | 25g protein**
+
+### Meal 3 (Pre-Workout Lunch)
+- 180g chicken breast
+- 200g white rice
+- Mixed vegetables
+- **~550 cal | 50g protein**
+
+### Meal 4 (Post-Workout)
+- Protein shake: 40g whey isolate with water
+- 1 medium sweet potato
+- **~350 cal | 42g protein**
+
+### Meal 5 (Dinner)
+- 200g lean beef or salmon
+- 150g white potato or pasta
+- Large green salad with olive oil
+- **~500 cal | 45g protein**
+
+---
+
+## Key Strategies for Your Cut
+
+✓ **Protein timing:** Spread intake across 4-5 meals for optimal muscle retention  
+✓ **Carb timing:** Prioritize carbs around training sessions  
+✓ **Stay hydrated:** 3-4L water daily  
+✓ **Vegetables:** Unlimited low-calorie veggies for satiety  
+✓ **Weekly refeed:** One higher-carb day (300g+) to support performance
+
+## Strength-Preserving Foods
+- **Lean proteins:** Chicken, turkey, white fish, egg whites, 93% lean beef
+- **Quality carbs:** Rice, potatoes, oatmeal, pasta (easy to digest pre-training)
+- **Healthy fats:** Olive oil, avocado, fatty fish (avoid all nuts/nut butters)
+
+Would you like specific meal prep ideas or adjustments based on training frequency?</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution fully satisfies all three mandatory requirements: it provides daily caloric totals, macronutrient breakdown, and meals with exact foods, portions, and timing. It also meets all secondary criteria: provides exactly 1 day of meals, contains appropriately high protein for a powerlifting cut, and avoids all nut products. While the output could be more compact as originally requested and includes extra content beyond the core meal plan, these are minor issues that don't violate any stated criteria. The solution is thorough, well-structured, and directly addresses the athlete's specific needs.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with an Olympic swimmer during heavy training who needs 5000+ calories and is vegetarian</td>
+                <td class="prompt-inputs"><strong>height:</strong> 188<br><strong>weight:</strong> 82<br><strong>goal:</strong> Olympic swimmer in heavy training phase requiring 5000+ calories daily<br><strong>restrictions:</strong> vegetarian</td>
+                <td class="criteria">• Meal plan totals approximately 5000+ calories<br>• All meals are vegetarian<br>• Includes protein sources suitable for athletic performance</td>
+                <td class="output"><pre># High-Calorie Vegetarian Meal Plan for Olympic Swimmer Training
+
+## Daily Calorie Target: 5000-5500 calories
+
+---
+
+## Sample Daily Meal Plan
+
+### Breakfast (1000-1200 cal)
+- Large bowl of oatmeal with whole milk, banana, berries, 3 tbsp peanut butter, honey, and chia seeds
+- 4 whole eggs scrambled with cheese and avocado
+- 2 slices whole grain toast with butter
+- Large glass of orange juice
+- Greek yogurt with granola
+
+### Mid-Morning Snack (600-700 cal)
+- Protein smoothie: banana, berries, protein powder, whole milk, oats, 2 tbsp almond butter
+- Handful of mixed nuts and dried fruit
+- Energy bar
+
+### Lunch (1200-1400 cal)
+- Large whole grain pasta with marinara sauce, chickpeas, and parmesan
+- Large mixed salad with olive oil dressing, nuts, seeds, and avocado
+- 2 slices garlic bread with butter
+- Fruit salad
+- Chocolate milk
+
+### Afternoon Snack (600-700 cal)
+- Bagel with cream cheese and nut butter
+- Trail mix with nuts, seeds, and dried fruit
+- Protein shake with whole milk
+
+### Dinner (1200-1400 cal)
+- Large vegetarian burrito bowl: brown rice, black beans, cheese, sour cream, guacamole, vegetables
+- Quinoa side salad
+- Hummus with pita bread
+- Dark chocolate and fruit for dessert
+
+### Evening Snack (400-500 cal)
+- Greek yogurt parfait with granola and honey
+- Apple with almond butter
+- Glass of whole milk
+
+---
+
+## Key Nutrient-Dense Foods to Emphasize
+
+**Protein Sources:**
+- Eggs, Greek yogurt, cottage cheese, cheese
+- Legumes (lentils, chickpeas, black beans)
+- Tofu, tempeh
+- Protein powder (whey or plant-based)
+- Quinoa
+
+**Calorie-Dense Carbs:**
+- Pasta, rice, bread, oats
+- Potatoes, sweet potatoes
+- Granola, cereal
+
+**Healthy Fats:**
+- Nuts and nut butters
+- Avocados
+- Olive oil
+- Seeds (chia, flax, hemp)
+- Full-fat dairy
+
+**Recovery & Performance:**
+- Chocolate milk post-workout
+- Bananas (potassium)
+- Berries (antioxidants)
+- Leafy greens (iron)
+
+---
+
+## Training Day Tips
+
+- **Pre-training (1-2 hrs before):** Easily digestible carbs (toast with honey, banana, oatmeal)
+- **During training:** Sports drinks, energy gels, bananas
+- **Post-training (within 30 min):** Chocolate milk + banana + protein bar
+- Stay hydrated with water and electrolyte drinks
+- Consider B12 supplementation (important for vegetarians)
+- Monitor iron levels regularly
+
+This plan provides ~140-160g protein, 650-750g carbs, and adequate healthy fats for optimal performance and recovery.</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution meets all three mandatory requirements: it provides a daily caloric total (5000-5500), includes macronutrient breakdown (protein, carbs, fats with ranges), and lists meals with foods and timing. However, the mandatory requirement for 'exact portions' is only partially met. While some items have quantities (4 eggs, 2 slices toast, 3 tbsp peanut butter), many foods use vague descriptors like 'large,' 'handful,' or list items without any portion guidance. This represents a significant deficiency in meeting the 'exact portions' requirement, though the solution does provide enough detail to be functional and meets the spirit of the requirements with calorie ranges per meal.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
