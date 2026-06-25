@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Create a JSON configuration for an AWS Lambda function that processes S3 events with a 5-minute timeout and 512MB memory allocation",
+    "format": "json",
+    "solution_criteria": "Valid JSON with Lambda timeout set to 300 seconds, memory set to 512, and proper S3 event trigger configuration"
+  },
+  {
+    "task": "Write a Python function that takes an AWS S3 bucket name and returns a list of all object keys in that bucket using boto3",
+    "format": "python",
+    "solution_criteria": "Function uses boto3 S3 client, correctly calls list_objects_v2 or similar method, handles pagination if necessary, and returns a list of keys"
+  },
+  {
+    "task": "Create a regular expression that validates an AWS IAM ARN format (arn:aws:iam::123456789012:role/MyRole)",
+    "format": "regex",
+    "solution_criteria": "Regex correctly matches valid IAM ARNs, captures account ID and resource path, rejects invalid formats, and works with various resource types (role, user, policy)"
+  }
+]
