@@ -1,47 +1,48 @@
 [
   {
     "prompt_inputs": {
-      "height": "175",
-      "weight": "68",
-      "goal": "Marathon runner needing carb-loading strategy for race tomorrow morning at 7 AM",
-      "restrictions": "No dairy products"
+      "content": "Recent advances in artificial neural networks have prompted philosophers to revisit classical questions about the nature of consciousness and intentionality. By examining the representational capacity of deep learning architectures, particularly transformer models with attention mechanisms, researchers have identified parallels between artificial pattern recognition and human perceptual processing in the visual cortex. This convergence has implications for computational theories of mind, suggesting that phenomenal experience might emerge from sufficiently complex information integration systems. Neuroimaging studies using fMRI and EEG have revealed that when subjects engage in abstract reasoning tasks, activation patterns in the prefrontal cortex exhibit hierarchical organization reminiscent of layered neural network architectures. These findings challenge traditional dualist perspectives in philosophy of mind while raising ethical questions about machine consciousness, moral agency of AI systems, and the criteria for attributing mental states to non-biological entities."
     },
     "solution_criteria": [
-      "Emphasizes high carbohydrate foods throughout the day",
-      "Includes easily digestible dinner to avoid race day stomach issues",
-      "Avoids dairy products in all meals"
+      "Identifies topics from neuroscience, artificial intelligence, and philosophy as distinct areas",
+      "Extracts all major topics present in the text",
+      "Returns output as a JSON array of strings"
     ],
-    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a marathon runner who needs high carbohydrate intake and has a morning race the next day"
+    "task_description": "\"\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with an interdisciplinary abstract combining multiple distinct fields (e.g., neuroscience, artificial intelligence, and philosophy) to verify the system can identify and separate diverse topic areas"
   },
   {
     "prompt_inputs": {
-      "height": "178",
-      "weight": "88",
-      "goal": "Powerlifting cutting phase - high protein, low calorie deficit while maintaining strength",
-      "restrictions": "Nut allergy"
+      "content": "The historiographical evolution of Shakespearean textual criticism reveals a dialectical tension between nineteenth-century bibliographic positivism and contemporary post-structuralist hermeneutics. Early scholars such as Malone and Capell endeavoured to establish definitive urtext editions through collation of quartos and folios, presuming authorial intentionality could be recovered through paleographic analysis. Conversely, modern theorists influenced by Foucault's conceptualization of the author-function interrogate the very notion of textual authority, arguing that Renaissance dramatic manuscripts constitute collaborative artifacts shaped by theatrical exigencies, scribal interventions, and print-house conventions. This methodological schism extends to editorial praxis, wherein traditional eclecticism privileges compositorial fidelity whilst revisionist approaches embrace textual instability as hermeneutically productive."
     },
     "solution_criteria": [
-      "Provides exactly 1 day meal plan",
-      "High protein content appropriate for powerlifter cutting phase",
-      "Contains no nuts or nut-based products"
+      "Extracts topics as a JSON array of strings",
+      "Identifies major scholarly concepts and methodological approaches discussed in the passage"
     ],
-    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a powerlifter in cutting phase who requires high protein, low calorie intake, and has a nut allergy"
+    "task_description": "\"\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with a historical literature review passage containing both archaic terminology and modern interpretations to assess handling of temporal context and specialized vocabulary"
   },
   {
     "prompt_inputs": {
-      "height": "188",
-      "weight": "82",
-      "goal": "Olympic swimmer in heavy training phase requiring 5000+ calories daily",
-      "restrictions": "vegetarian"
+      "content": "Participants were randomly assigned to experimental and control conditions using a computer-generated randomization sequence with block sizes of four. The primary outcome measure was assessed using the Beck Depression Inventory-II (BDI-II) administered at baseline, 6 weeks, and 12 weeks post-intervention. Secondary outcomes included anxiety symptoms measured by the GAD-7 scale and quality of life assessed through the WHO-QOL-BREF questionnaire. Statistical analyses were conducted using SPSS version 27.0, with mixed-effects models employed to account for repeated measures and missing data handled via maximum likelihood estimation. Effect sizes were calculated using Cohen's d, and significance levels were set at p < 0.05 with Bonferroni corrections applied for multiple comparisons."
     },
     "solution_criteria": [
-      "Meal plan totals approximately 5000+ calories",
-      "All meals are vegetarian",
-      "Includes protein sources suitable for athletic performance"
+      "Extracts procedural/methodological topics (e.g., randomization, measurement instruments, statistical methods)",
+      "Returns a valid JSON array of strings"
     ],
-    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with an Olympic swimmer during heavy training who needs 5000+ calories and is vegetarian"
+    "task_description": "\"\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with a methodology section describing experimental procedures and statistical analyses to evaluate extraction of procedural topics versus theoretical concepts"
+  },
+  {
+    "prompt_inputs": {
+      "content": "Climate change mitigation strategies require comprehensive understanding of greenhouse gas emissions across multiple sectors. The transportation sector represents a critical focus area, accounting for approximately 27% of total carbon emissions in developed nations. Within transportation, road vehicles contribute the largest share, with passenger cars alone responsible for 41% of transport-related CO2 output. The shift toward electric vehicles addresses these emissions through battery technology improvements and charging infrastructure expansion. However, the aviation subsector presents unique decarbonization challenges due to energy density requirements and long-haul flight constraints. Maritime shipping similarly struggles with emission reduction, though experimental hydrogen fuel cells and ammonia-based propulsion systems show promise. Beyond direct emissions, the lifecycle carbon footprint encompasses vehicle manufacturing processes, including steel production and rare earth mineral extraction for batteries, which themselves generate substantial upstream emissions that must be accounted for in comprehensive climate policy frameworks."
+    },
+    "solution_criteria": [
+      "Extracts topics at multiple hierarchical levels (broad to specific)",
+      "Includes both high-level concepts (e.g., climate change) and nested sub-topics (e.g., specific vehicle types or technologies)",
+      "Returns output as a JSON array of strings"
+    ],
+    "task_description": "\"\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\"\n    ",
+    "scenario": "Testing with a passage containing nested sub-topics and hierarchical concepts (e.g., climate change > carbon emissions > transportation sector) to check if the system extracts appropriate granularity levels"
   }
 ]
